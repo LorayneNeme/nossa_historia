@@ -14,6 +14,7 @@
             <li><a href="#historia">Nossa História</a></li>
             <li><a href="#contador">Contador</a></li>
             <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#voz">Voz</a></li>
             <li><a href="#mensagem">Mensagem</a></li>
         </ul>
     </nav>
@@ -109,7 +110,33 @@
      
         </div>
      </section>
-   
+
+     <section id="voz" class="secao">
+    <h2>Voz do meu amor 💜</h2>
+    <button id="play-voz" > 
+         Aperte e escute seu amor </button>
+        
+        <h2>Preciso de você 💜</h2>
+    <br><br>
+    <a href="https://wa.me/31986871287/?text=Preciso%20de%20você%20" target="_blank" class="whatsapp-btn">📱 Enviar mensagem no WhatsApp</a>
+</section>
+
+<script>
+  const playBtn = document.getElementById('play-voz');
+  const audio = new Audio('fotos/musica/voz.opus'); // Certifique-se de que o caminho e o formato estão corretos
+
+  playBtn.addEventListener('click', () => {
+      audio.play().catch((error) => {
+          console.error('Erro ao tentar reproduzir o áudio:', error);
+      });
+  });
+
+  // Efeito simples ao passar o mouse
+  playBtn.addEventListener('mouseover', () => playBtn.style.backgroundColor = '#0056b3');
+  playBtn.addEventListener('mouseout', () => playBtn.style.backgroundColor = '#007BFF');
+</script>
+    <!-- Seção VOZ -->
+ 
     <!-- Seção MENSAGEM FINAL-->
      <section id="mensagem" class="secao">
         <h2>Mensagem Final</h2>
@@ -128,5 +155,14 @@
 
     <!-- Script -->
     <script src="script.js"></script>
+
+   
+
+    <!-- Rodapé -->
+    <footer class="rodape" style="text-align: center;">
+        <p>&copy; 21/06/2025 Começo oficial da Nossa História. Todos os direitos reservados a Lorayne.</p>
+        
+    </footer>
+
 </body>
 </html>
