@@ -157,6 +157,22 @@
 
      <!-- Música -->
     <audio id="musicaFundo" src="fotos/musica/ANAVITÓRIA, Lagum - universo de coisas que eu desconheço (1_2) (Letra) - Lav nuns (youtube).mp3"></audio>
+       <button id="botaoMusica">⏸️ Pausar música</button>
+       <script>
+  const musica = document.getElementById('musicaFundo');
+  const botao = document.getElementById('botaoMusica');
+
+  botao.addEventListener('click', () => {
+    if (musica.paused) {
+      musica.play();
+      botao.textContent = '⏸️ Pausar ';
+    } else {
+      musica.pause();
+      botao.textContent = '▶️ Tocar';
+    }
+  });
+</script>
+
 
     <!-- Script -->
     <script src="script.js"></script>
